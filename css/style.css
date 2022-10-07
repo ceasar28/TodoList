@@ -1,0 +1,261 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --light: #eee;
+  ---pink: #ec4899;
+  --purple: #8b5cf6;
+  --gray: #6b7280;
+  --color-primary: hsl(0, 0%, 0%);
+  --yellow: hsl(51, 100%, 50%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  font-family: 'fira sans', sans-serif;
+
+}
+
+html {
+  font-size: 80%;
+}
+
+body {
+  /* background-color: #151638; */
+  background-color: var(--dark);
+  overflow-x: hidden;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: .8rem;
+  /*  flex-direction: column; */
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+header {
+  padding: 2rem 1rem;
+
+  width: 100%;
+
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+/*   .container {
+  width: 96%;
+  margin: auto;
+
+}
+ */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+}
+
+.row.center {
+  justify-content: center;
+
+}
+
+.Box {
+  /*  background-color: #0b0d1e; */
+  background-color: var(--color-primary);
+  width: 80%;
+  min-height: 45rem;
+  max-height: 1000rem;
+  border-radius: 35px;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  border: 4px solid #33ff00;
+
+  justify-content: center;
+}
+
+#Add {
+  margin-right: 0rem;
+  width: 10%;
+}
+
+#stay,
+.stay {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.done {
+  accent-color: red;
+  margin-right: 10px;
+}
+
+#Input {
+  margin-left: 0;
+  background-color: var(--darker);
+  width: 84%;
+  border-radius: 1rem;
+  margin-right: 1.2rem;
+  padding: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+
+}
+
+#Input::placeholder {
+  color: var(--gray);
+}
+
+#Add {
+  color: var(--yellow);
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#Add:hover {
+  opacity: 0.8;
+}
+
+#Add:submit:active {
+  opacity: 0.6;
+}
+
+#tasks {
+  padding: 0rem 1rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+.Task h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--gray);
+  display: flex;
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.content .text {
+  color: var(--light);
+  font-size: 1.125rem;
+  width: 80%;
+  display: block;
+  transition: 0.4s;
+}
+
+.content .text:not(:read-only) {
+  color: var(---pink);
+}
+
+.content .action {
+  display: flex;
+}
+
+.content .action button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.content .action button:hover {
+  opacity: 0.8;
+}
+
+.content .action button:active {
+  opacity: 0.6;
+}
+
+.content .action .edit {
+  color: var(--yellow);
+}
+
+.content .action .delete {
+  color: var(---pink);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.faded {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  transition: 2s;
+}
+
+.Spin {
+  position: absolute;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  top: 65%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* .Spin .span {
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: -40px;
+  gap: -100px;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 4px solid transparent;
+  border-top: 4px solid hsl(100, 100%, 50%);
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+
+
+} */
